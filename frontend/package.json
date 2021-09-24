@@ -25,6 +25,7 @@
 		"vite": "^2.5.4"
 	},
 	"dependencies": {
-		"daisyui": "^1.14.1"
+		"daisyui": "^1.14.1",
+		"pretty-js": "^0.2.2"
 	}
 }
