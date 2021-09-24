@@ -1,3 +1,4 @@
+const daisyui = require("daisyui");
 const config = {
 	mode: "jit",
 	purge: [
@@ -6,7 +7,7 @@ const config = {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [daisyui],
 };
 
 module.exports = config;
