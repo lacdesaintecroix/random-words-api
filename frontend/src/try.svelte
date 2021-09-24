@@ -1,9 +1,11 @@
 <script>
-  let json = "";
+  import prettyJs from "pretty-js";
+  let jsonLines = [];
   const submit = async () => {
-    alert("foo");
     const res = await fetch("/api?n=5");
-    json = await res.json();
+    const jsonString = JSON.stringify(await res.json());
+    const prettyPrinted = prettyJs(jsonString);
+    jsonLines = prettyPrinted.split("\n");
   };
 </script>
 
@@ -19,10 +21,12 @@
   <pre data-prefix="$">
     <code>Result:</code>
   </pre>
-  <pre
-    data-prefix=">"
-    class="text-success">
-          <code>{json}</code>
-        </pre>
+  {#each jsonLines as line}
+    <pre
+      data-prefix=">"
+      class="text-success">
+        <code>{line}</code>
+      </pre>
+  {/each}
 </div>
 <br />
