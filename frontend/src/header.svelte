@@ -1,9 +1,11 @@
 <script>
   import spinningWheelPng from "./assets/spinning-wheel.png";
+  import Github from "./github.svelte";
   import DarkModeToggle from "./lib/darkModeToggle.svelte";
 </script>
 
-<div class="absolute right-0 top-5">
+<div class="w-full flex justify-between top-5">
+  <Github />
   <DarkModeToggle />
 </div>
 <img

@@ -9,7 +9,7 @@
 
 <div class:dark={$darkMode}>
   <main
-    class="transition-colors duration-500 dark:bg-gray-800 dark:text-purple-200 bg-purple-300 text-gray-600 font-mono relative h-screen"
+    class="w-screen h-screen font-mono relative transition-colors duration-500 dark:bg-gray-800 dark:text-purple-200 bg-purple-300 text-gray-600"
   >
     <div class="flex relative z-20 items-center">
       <div
@@ -21,7 +21,6 @@
           <HowTo />
           <br />
           <Try />
-          <Github />
         </div>
       </div>
     </div>
