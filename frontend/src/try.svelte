@@ -34,7 +34,7 @@
 {:else if mounted}
   <div
     transition:slide={{ delay: 0, duration: 200, easing: quintOut }}
-    class="mockup-code"
+    class="mockup-code dark:bg-purple-900"
   >
     <pre data-prefix="$">
   <code>Result:</code>

@@ -3,7 +3,7 @@
 >
   How do I use this ?
 </h2>
-<div class="mockup-code">
+<div class="mockup-code dark:bg-purple-900">
   <pre>
             <code>// Get one word</code>
           </pre>
