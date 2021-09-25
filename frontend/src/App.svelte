@@ -1,6 +1,5 @@
 <script>
   import Explanation from "./explanation.svelte";
-  import Github from "./github.svelte";
   import Header from "./header.svelte";
   import HowTo from "./howTo.svelte";
   import { darkMode } from "./lib/globals";
