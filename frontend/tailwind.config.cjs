@@ -1,7 +1,7 @@
 const daisyui = require("daisyui");
 const config = {
 	mode: "jit",
-	darkMode:"media",
+	darkMode:"class",
 	purge: [
 		"./src/**/*.{html,js,svelte,ts}",
 	],

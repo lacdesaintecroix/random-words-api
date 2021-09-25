@@ -24,7 +24,9 @@
   <pre
     data-prefix=">"
     class="text-success">
-        <code><br>{json}</code>
+        <code><br><div class="px-5">
+          {json}
+        </div></code>
       </pre>
 </div>
 <br />

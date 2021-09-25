@@ -1,7 +1,11 @@
 <script>
   import spinningWheelPng from "./assets/spinning-wheel.png";
+  import DarkModeToggle from "./lib/darkModeToggle.svelte";
 </script>
 
+<div class="absolute right-0 top-5">
+  <DarkModeToggle />
+</div>
 <img
   src={spinningWheelPng}
   alt="spinning-wheel.png"
