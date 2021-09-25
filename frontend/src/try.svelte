@@ -1,11 +1,21 @@
 <script>
   import prettyJs from "pretty-js";
+  import { DoubleBounce } from "svelte-loading-spinners";
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+  let loading = false;
+  let mounted = false;
   let json = "";
-  const url = "https://jsonplaceholder.typicode.com/users/1"; //"/api?n=5"
+  const url = "/api?n=5";
   const submit = async () => {
+    mounted = true;
+    loading = true;
     const res = await fetch(url);
     const jsonString = JSON.stringify(await res.json());
-    json = prettyJs(jsonString);
+    setTimeout(() => {
+      json = prettyJs(jsonString);
+      loading = false;
+    }, 2000);
   };
 </script>
 
@@ -17,16 +27,25 @@
   >
 </div>
 <br />
-<div class="mockup-code">
-  <pre data-prefix="$">
-    <code>Result:</code>
-  </pre>
-  <pre
-    data-prefix=">"
-    class="text-success">
-        <code><br><div class="px-5">
-          {json}
-        </div></code>
-      </pre>
-</div>
+{#if loading}
+  <div class="flex justify-center">
+    <DoubleBounce size="60" color="#4c1d95" unit="px" duration="1s" />
+  </div>
+{:else if mounted}
+  <div
+    transition:slide={{ delay: 0, duration: 200, easing: quintOut }}
+    class="mockup-code"
+  >
+    <pre data-prefix="$">
+  <code>Result:</code>
+</pre>
+    <pre
+      data-prefix=">"
+      class="text-success">
+  <code><br><div class="px-5">
+    {json}
+  </div></code>
+</pre>
+  </div>
+{/if}
 <br />

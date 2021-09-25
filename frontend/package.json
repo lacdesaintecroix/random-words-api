@@ -26,6 +26,7 @@
 	},
 	"dependencies": {
 		"daisyui": "^1.14.1",
-		"pretty-js": "^0.2.2"
+		"pretty-js": "^0.2.2",
+		"svelte-loading-spinners": "^0.1.7"
 	}
 }
