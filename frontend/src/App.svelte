@@ -7,7 +7,7 @@
 </script>
 
 <main
-  class="dark:bg-gray-800 font-mono bg-white relative overflow-hidden h-screen"
+  class="dark:bg-gray-800 dark:text-purple-200 bg-purple-300 text-gray-600 font-mono relative h-screen"
 >
   <div class="flex relative z-20 items-center">
     <div
@@ -16,17 +16,11 @@
       <div class="flex flex-col">
         <Header />
         <Explanation />
-        <Try />
         <HowTo />
         <br />
+        <Try />
         <Github />
       </div>
     </div>
   </div>
 </main>
-
-<style>
-  main {
-    background-color: hsl(274, 28%, 75%);
-  }
-</style>

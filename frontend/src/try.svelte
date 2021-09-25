@@ -1,18 +1,18 @@
 <script>
   import prettyJs from "pretty-js";
-  let jsonLines = [];
+  let json = "";
+  const url = "https://jsonplaceholder.typicode.com/users/1"; //"/api?n=5"
   const submit = async () => {
-    const res = await fetch("/api?n=5");
+    const res = await fetch(url);
     const jsonString = JSON.stringify(await res.json());
-    const prettyPrinted = prettyJs(jsonString);
-    jsonLines = prettyPrinted.split("\n");
+    json = prettyJs(jsonString);
   };
 </script>
 
 <div class="flex justify-center">
   <button
     on:click={submit}
-    class="inline-flex text-white bg-indigo-900 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+    class="inline-flex text-white bg-purple-900 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg"
     >Try Now!</button
   >
 </div>
@@ -21,12 +21,10 @@
   <pre data-prefix="$">
     <code>Result:</code>
   </pre>
-  {#each jsonLines as line}
-    <pre
-      data-prefix=">"
-      class="text-success">
-        <code>{line}</code>
+  <pre
+    data-prefix=">"
+    class="text-success">
+        <code><br>{json}</code>
       </pre>
-  {/each}
 </div>
 <br />

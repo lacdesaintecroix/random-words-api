@@ -1,5 +1,5 @@
 <h2
-  class="mt-4 max-w-3xl text-4xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2"
+  class="mt-4 max-w-3xl text-4xl md:text-6xl font-bold mx-auto text-center py-2"
 >
   How do I use this ?
 </h2>
